@@ -70,7 +70,34 @@ while not game_over:
 	print(board)
 	if game_over==True:
 		print("Game Over")
-		
-			
-		
 
+'''
+output:
+Player 1: Choose row number (0-2): 1
+Player 1: Choose column number (0-2): 1
+[[0. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 0.]]
+Player 2: Choose row number (0-2): 1
+Player 2: Choose column number (0-2): 2
+[[0. 0. 0.]
+ [0. 1. 2.]
+ [0. 0. 0.]]
+Player 1: Choose row number (0-2): 0
+Player 1: Choose column number (0-2): 0
+[[1. 0. 0.]
+ [0. 1. 2.]
+ [0. 0. 0.]]
+Player 2: Choose row number (0-2): 0
+Player 2: Choose column number (0-2): 1
+[[1. 2. 0.]
+ [0. 1. 2.]
+ [0. 0. 0.]]
+Player 1: Choose row number (0-2): 2
+Player 1: Choose column number (0-2): 2
+Player 1 Won
+[[1. 2. 0.]
+ [0. 1. 2.]
+ [0. 0. 1.]]
+Game Over
+'''
