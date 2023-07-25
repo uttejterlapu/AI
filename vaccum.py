@@ -14,8 +14,7 @@ print("vaccum cleaner present in room ",vaccumpos)
 
 if vaccumpos=="A" and A.dirty and B.dirty:
     A.suck()
-    print("cleaned A")
-    print("moving to B")
+    print("cleaned A moving to B")
     vaccumpos == "B"
     B.suck()
     print("cleaned B")
@@ -28,8 +27,7 @@ elif vaccumpos=="A" and A.dirty and not B.dirty:
     
 elif vaccumpos=="B" and A.dirty and B.dirty:
     B.suck()
-    print("cleaned B")
-    print("moving to A")
+    print("cleaned B moving to A")
     vaccumpos == "A"
     A.suck()
     print("cleaned A")
