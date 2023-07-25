@@ -1,3 +1,4 @@
+import sys
 class room:
     def __int__ (self):
         self.dirty = False
