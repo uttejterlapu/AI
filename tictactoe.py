@@ -2,10 +2,6 @@ import numpy as np
 
 ROWS = 3
 COLUMNS = 3
-'''
-WIDTH=600
-HEIGHT=600
-SIZE =(WIDTH,HEIGHT)'''
 
 def mark(row,col,player):
 	board[row][col] = player
