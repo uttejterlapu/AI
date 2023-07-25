@@ -1,53 +1,45 @@
-import sys
 class room:
-    def _int_ (self):
+    def __int__ (self):
         self.dirty = False
     def suck(self):
         self.dirty = False
 
 A = room()
 B = room()
-cost = 0
-count = 2
+
 A.dirty = input("Is room A dirty? Enter True/False: ").lower()=="true"
 B.dirty = input("Is room B dirty? Enter True/False: ").lower()=="true"
-vaccumpos= input("Is vaccum cleaner present in room A or B :")
+vaccumpos= input("Is vaccum cleaner present in room A or B :").upper()
+print("vaccum cleaner present in room ",vaccumpos)
 
-if not A.dirty and not B.dirty:
+if vaccumpos=="A" and A.dirty and B.dirty:
+    A.suck()
+    print("cleaned A")
+    print("moving to B")
+    vaccumpos == "B"
+    B.suck()
+    print("cleaned B")
+    sys.exit()
+
+elif vaccumpos=="A" and A.dirty and not B.dirty:  
+    A.suck()
+    print("cleaned A")
+    sys.exit()
+    
+elif vaccumpos=="B" and A.dirty and B.dirty:
+    B.suck()
+    print("cleaned B")
+    print("moving to A")
+    vaccumpos == "A"
+    A.suck()
+    print("cleaned A")
+    sys.exit()
+    
+elif vaccumpos=="B" and not A.dirty and B.dirty:
+    B.suck()
+    print("cleaned B")
+    sys.exit()
+    
+elif not A.dirty and not B.dirty:
     print("Both rooms are already clean Total cost = 0")
     sys.exit()
-print("vaccum cleaner present in room ",vaccumpos)
-while count>0:
-    if vaccumpos == "A" and A.dirty:
-        A.suck()
-        print("cleaning room A")
-        cost +=1
-        count -=1
-    if vaccumpos == "A" and B.dirty:
-        print("vaccum cleaner moving to room B")
-        cost +=1
-        vaccumpos = "B"
-    if vaccumpos == "B" and B.dirty:
-        B.suck()
-        print("cleaning room B")
-        cost +=1
-        count -=1
-    if vaccumpos =="B" and B.dirty:
-        print("Vaccum cleaner moving to room A")
-        cost +=1
-        vaccumpos = "A"
-print("Both rooms cleaned")
-print("Total cost = ",cost)
-
-
-'''
-Is room A dirty? Enter True/False: true
-Is room B dirty? Enter True/False: true
-Is vaccum cleaner present in room A or B :A
-vaccum cleaner present in room  A
-cleaning room A
-vaccum cleaner moving to room B
-cleaning room B
-Both rooms cleaned
-Total cost =  3
-'''
