@@ -41,3 +41,5 @@ elif vaccumpos=="B" and not A.dirty and B.dirty:
 elif not A.dirty and not B.dirty:
     print("Both rooms are already clean Total cost = 0")
     sys.exit()
+
+print("all rooms are cleaned")
