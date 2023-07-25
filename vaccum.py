@@ -35,7 +35,7 @@ def agentFunction(vaccumpos):
         sys.exit()
     
     elif not A.dirty and not B.dirty:
-        print("Both rooms are already clean Total cost = 0")
+        print("Both rooms are already")
         sys.exit()
 
 A = room()
