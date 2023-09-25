@@ -1,11 +1,3 @@
-import random
-
-# List of words to choose from
-word_list = ["apple", "banana", "cherry", "orange", "grape", "kiwi", "strawberry", "watermelon"]
-
-def choose_word():
-    return random.choice(word_list)
-
 def display_word(word, guessed_letters):
     display = ""
     for letter in word:
@@ -17,7 +9,7 @@ def display_word(word, guessed_letters):
 
 def hangman():
     print("Welcome to Hangman!")
-    word_to_guess = choose_word()
+    word_to_guess = input("Enter a word to guess : ")
     guessed_letters = []
     attempts = 6
 
